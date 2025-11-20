@@ -3,7 +3,14 @@ import { COLORS, FONTS, SIZES } from "@/src/constants";
 import Feather from "@expo/vector-icons/Feather";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import React from "react";
-import { ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const profile = () => {
@@ -14,7 +21,7 @@ const profile = () => {
       label: "Phone Number",
       value: "+234 803 456 7890",
       iconBg: "#E3F2FD",
-      iconColor: "#2196F3"
+      iconColor: "#2196F3",
     },
     {
       id: 2,
@@ -22,7 +29,7 @@ const profile = () => {
       label: "Email Address",
       value: "chinedu.okafor@email.com",
       iconBg: "#E8F5E8",
-      iconColor: "#4CAF50"
+      iconColor: "#4CAF50",
     },
     {
       id: 3,
@@ -30,7 +37,7 @@ const profile = () => {
       label: "Address",
       value: "Lagos, Nigeria",
       iconBg: "#F3E5F5",
-      iconColor: "#9C27B0"
+      iconColor: "#9C27B0",
     },
     {
       id: 4,
@@ -38,8 +45,8 @@ const profile = () => {
       label: "Bank Account",
       value: "1234567890 - Access Bank",
       iconBg: "#FFF3E0",
-      iconColor: "#FF9800"
-    }
+      iconColor: "#FF9800",
+    },
   ];
 
   const menuItems = [
@@ -47,43 +54,40 @@ const profile = () => {
       id: 1,
       icon: "user",
       title: "Personal Information",
-      hasArrow: true
+      hasArrow: true,
     },
     {
       id: 2,
       icon: "credit-card",
       title: "Bank Details",
-      hasArrow: true
+      hasArrow: true,
     },
     {
       id: 3,
       icon: "shield",
       title: "Security Settings",
-      hasArrow: true
+      hasArrow: true,
     },
     {
       id: 4,
       icon: "settings",
       title: "App Settings",
-      hasArrow: true
+      hasArrow: true,
     },
     {
       id: 5,
       icon: "help-circle",
       title: "Help & Support",
-      hasArrow: true
-    }
+      hasArrow: true,
+    },
   ];
 
   return (
     <SafeAreaView style={styles.page}>
       <StatusBar backgroundColor={COLORS.primary} barStyle={"light-content"} />
       <HeaderA />
-      
-      <ScrollView 
-        style={styles.container}
-        showsVerticalScrollIndicator={false}
-      >
+
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         {/* User Profile Card */}
         <View style={styles.profileCard}>
           <View style={styles.avatarContainer}>
@@ -101,8 +105,17 @@ const profile = () => {
         <View style={styles.contactSection}>
           {contactInfo.map((item) => (
             <View key={item.id} style={styles.contactItem}>
-              <View style={[styles.contactIconContainer, { backgroundColor: item.iconBg }]}>
-                <Feather name={item.icon as any} size={16} color={item.iconColor} />
+              <View
+                style={[
+                  styles.contactIconContainer,
+                  { backgroundColor: item.iconBg },
+                ]}
+              >
+                <Feather
+                  name={item.icon as any}
+                  size={16}
+                  color={item.iconColor}
+                />
               </View>
               <View style={styles.contactInfo}>
                 <Text style={styles.contactLabel}>{item.label}</Text>
@@ -115,10 +128,18 @@ const profile = () => {
         {/* Menu Items */}
         <View style={styles.menuSection}>
           {menuItems.map((item) => (
-            <TouchableOpacity key={item.id} style={styles.menuItem} activeOpacity={0.6}>
+            <TouchableOpacity
+              key={item.id}
+              style={styles.menuItem}
+              activeOpacity={0.6}
+            >
               <View style={styles.menuLeft}>
                 <View style={styles.menuIconContainer}>
-                  <Feather name={item.icon as any} size={18} color={COLORS.gray7} />
+                  <Feather
+                    name={item.icon as any}
+                    size={18}
+                    color={COLORS.gray7}
+                  />
                 </View>
                 <Text style={styles.menuTitle}>{item.title}</Text>
               </View>

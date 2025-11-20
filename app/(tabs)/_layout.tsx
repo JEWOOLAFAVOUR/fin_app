@@ -48,6 +48,19 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="invest"
+        options={{
+          title: "Invest",
+          tabBarIcon: ({ color, focused }) => (
+            <MaterialIcons
+              name="electric-bolt"
+              size={28}
+              color={focused ? COLORS.primary : COLORS.gray7}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="loans"
         options={{
           title: "Loans",

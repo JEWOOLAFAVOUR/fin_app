@@ -10,7 +10,7 @@ const loans = () => {
     <SafeAreaView style={styles.page}>
       <StatusBar backgroundColor={COLORS.primary} barStyle={"light-content"} />
       <HeaderA />
-      
+
       <View style={styles.container}>
         {/* Header Section */}
         <View style={styles.headerSection}>
@@ -23,13 +23,9 @@ const loans = () => {
         {/* Empty State */}
         <View style={styles.emptyStateContainer}>
           <View style={styles.iconContainer}>
-            <MaterialIcons 
-              name="description" 
-              size={64} 
-              color={COLORS.gray7} 
-            />
+            <MaterialIcons name="description" size={64} color={COLORS.gray7} />
           </View>
-          
+
           <Text style={styles.emptyStateTitle}>No active loans</Text>
           <Text style={styles.emptyStateSubtitle}>
             You haven't taken any loans yet
