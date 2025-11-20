@@ -1,20 +1,31 @@
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { useNavigation } from "@react-navigation/native";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import Feather from "@expo/vector-icons/Feather";
 import React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
-import { SIZES } from "../constants";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { COLORS, FONTS, SIZES } from "../constants";
 
 const HeaderA = () => {
-  const navigation = useNavigation();
   return (
-    <View>
-      <TouchableOpacity onPress={() => navigation.goBack()}>
-        <MaterialIcons
-          name="keyboard-arrow-left"
-          size={SIZES.h1}
-          color="black"
-          style={{ margin: 0 }}
-        />
+    <View style={styles.topctn}>
+      <TouchableOpacity activeOpacity={0.6}>
+        <AntDesign name="menu" size={SIZES.h3} color={COLORS.white} />
+      </TouchableOpacity>
+      <View style={{ flexDirection: "row", alignItems: "center", flex: 1 }}>
+        <View style={styles.logo}>
+          <Text>O</Text>
+        </View>
+        <Text
+          style={{
+            ...FONTS.body3,
+            color: COLORS.white,
+            marginLeft: SIZES.h4,
+          }}
+        >
+          Opticom
+        </Text>
+      </View>
+      <TouchableOpacity activeOpacity={0.6}>
+        <Feather name="bell" size={SIZES.h2} color={COLORS.white} />
       </TouchableOpacity>
     </View>
   );
@@ -22,4 +33,21 @@ const HeaderA = () => {
 
 export default HeaderA;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  topctn: {
+    height: SIZES.h1 * 2.4,
+    backgroundColor: COLORS.primary,
+    paddingHorizontal: SIZES.width * 0.05,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  logo: {
+    height: SIZES.h1 * 1,
+    width: SIZES.h1 * 1,
+    backgroundColor: COLORS.white,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 100,
+    marginLeft: SIZES.h3,
+  },
+});

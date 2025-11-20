@@ -1,7 +1,7 @@
-import shapescape_logo from "../assets/images/shapesape_logo.avif";
+import booking_img from "../assets/images/booking_img.png";
 
 const icons = {
-  shapescape_logo,
+  booking_img,
 };
 
 export default icons;

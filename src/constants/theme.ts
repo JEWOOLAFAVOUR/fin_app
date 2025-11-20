@@ -12,7 +12,7 @@ export const COLORS = {
   white: "#ffffff",
   offwhite: "#F3F3F3",
   black: "#000000",
-  primary_1: "#041c3b",
+  primary: "#00a66e",
   secondary_1: "#cdf462",
   green: "#2BC652",
   yellow_1: "#fff84b",
@@ -22,6 +22,7 @@ export const COLORS = {
   gray2: "#F5F5F5",
   gray4: "#f6f5fa",
   gray6: "#03152d",
+  gray7: "#99a1af",
   cyan: "#cfb7f5",
 };
 
