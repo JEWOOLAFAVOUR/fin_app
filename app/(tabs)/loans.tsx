@@ -14,16 +14,16 @@ const loans = () => {
       <View style={styles.container}>
         {/* Header Section */}
         <View style={styles.headerSection}>
-          <Text style={styles.title}>My Loans</Text>
+          <Text style={styles.title}>My Loansss</Text>
           <Text style={styles.subtitle}>
             Track all your loan applications and repayments
           </Text>
         </View>
 
-        {/* Empty State */}
-        <View style={styles.emptyStateContainer}>
+        {/* Empty State Card */}
+        <View style={styles.emptyStateCard}>
           <View style={styles.iconContainer}>
-            <MaterialIcons name="description" size={64} color={COLORS.gray7} />
+            <MaterialIcons name="description" size={48} color={COLORS.gray7} />
           </View>
 
           <Text style={styles.emptyStateTitle}>No active loans</Text>
@@ -60,16 +60,24 @@ const styles = StyleSheet.create({
     ...FONTS.body4,
     color: COLORS.gray7,
   },
-  emptyStateContainer: {
-    flex: 1,
-    justifyContent: "center",
+  emptyStateCard: {
+    backgroundColor: COLORS.white,
+    borderRadius: SIZES.base,
+    paddingVertical: SIZES.h2 * 1.5,
+    paddingHorizontal: SIZES.width * 0.08,
     alignItems: "center",
-    paddingHorizontal: SIZES.width * 0.1,
+    justifyContent: "center",
+    elevation: 1,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    marginTop: SIZES.h4,
   },
   iconContainer: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 80,
+    height: 80,
+    borderRadius: 40,
     backgroundColor: COLORS.chocolateBackground,
     justifyContent: "center",
     alignItems: "center",

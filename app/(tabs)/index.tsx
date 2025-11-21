@@ -4,10 +4,11 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 import Feather from "@expo/vector-icons/Feather";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { router } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
   FlatList,
-  StatusBar,
+  // StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -161,6 +162,7 @@ const HomeScreen = () => {
           </View>
           <TouchableOpacity
             activeOpacity={0.6}
+            onPress={() => router.push("/(tabs)/loan")}
             style={{
               height: SIZES.h1,
               width: SIZES.width * 0.25,
@@ -263,7 +265,8 @@ const HomeScreen = () => {
   };
   return (
     <SafeAreaView style={styles.page}>
-      <StatusBar backgroundColor={COLORS.primary} barStyle={"light-content"} />
+      {/* <StatusBar backgroundColor={COLORS.primary} barStyle={"light-content"} /> */}
+      <StatusBar style="light" backgroundColor={COLORS.primary} />
       <HeaderA />
       <FlatList
         data={[""]}

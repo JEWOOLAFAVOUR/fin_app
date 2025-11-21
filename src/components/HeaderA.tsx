@@ -24,8 +24,9 @@ const HeaderA = () => {
           Opticom
         </Text>
       </View>
-      <TouchableOpacity activeOpacity={0.6}>
+      <TouchableOpacity activeOpacity={0.6} style={styles.bellContainer}>
         <Feather name="bell" size={SIZES.h2} color={COLORS.white} />
+        <View style={styles.notificationDot} />
       </TouchableOpacity>
     </View>
   );
@@ -49,5 +50,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 100,
     marginLeft: SIZES.h3,
+  },
+  bellContainer: {
+    position: "relative",
+  },
+  notificationDot: {
+    position: "absolute",
+    top: -2,
+    right: 2,
+    width: 8,
+    height: 8,
+    backgroundColor: "#FF4444",
+    borderRadius: 4,
+    // borderWidth: 1,
+    // borderColor: COLORS.white,
   },
 });

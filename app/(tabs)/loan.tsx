@@ -2,6 +2,7 @@ import HeaderA from "@/src/components/HeaderA";
 import { COLORS, FONTS, SIZES } from "@/src/constants";
 import Feather from "@expo/vector-icons/Feather";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import {
   StatusBar,
@@ -40,6 +41,7 @@ const LoanScreen = () => {
       >
         <TouchableOpacity
           activeOpacity={0.6}
+          onPress={() => router.push("/(tabs)")}
           style={{ flexDirection: "row", alignItems: "center" }}
         >
           <Feather name="arrow-left" size={SIZES.h2 * 1.2} color="black" />
@@ -83,7 +85,7 @@ const LoanScreen = () => {
             >
               How much do you need?
             </Text>
-            <View style={styles.amountInputContainer}>
+            <View style={styles.amountRow}>
               <Text style={styles.currencySymbol}>₦</Text>
               <TextInput
                 style={styles.amountInput}
@@ -91,6 +93,7 @@ const LoanScreen = () => {
                 onChangeText={setLoanAmount}
                 keyboardType="numeric"
                 placeholder="0"
+                placeholderTextColor={COLORS.gray7}
               />
             </View>
             <View style={styles.amountSlider}>
@@ -229,10 +232,19 @@ const styles = StyleSheet.create({
     borderBottomColor: COLORS.chocolateBackground,
     paddingBottom: SIZES.base,
   },
+  amountRow: {
+    flexDirection: "row",
+    alignItems: "baseline",
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.chocolateBackground,
+    paddingBottom: SIZES.base,
+    marginTop: SIZES.base,
+  },
   currencySymbol: {
     ...FONTS.h1,
     color: COLORS.primary,
-    marginRight: SIZES.base,
+    includeFontPadding: false,
+    textAlignVertical: "bottom",
   },
   amountInput: {
     flex: 1,
@@ -241,6 +253,8 @@ const styles = StyleSheet.create({
     padding: 0,
     margin: 0,
     textAlign: "right",
+    includeFontPadding: false,
+    textAlignVertical: "bottom",
   },
   amountSlider: {
     flexDirection: "row",
