@@ -46,6 +46,7 @@ export default function RootLayout() {
       <StatusBar backgroundColor={COLORS.primary} barStyle={"light-content"} />
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="paybills" options={{ headerShown: false }} />
         <Stack.Screen
           name="modal"
           options={{ presentation: "modal", title: "Modal" }}

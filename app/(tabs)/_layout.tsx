@@ -5,6 +5,7 @@ import { HapticTab } from "@/components/haptic-tab";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 import { COLORS } from "@/src/constants";
+import Feather from "@expo/vector-icons/Feather";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import Octicons from "@expo/vector-icons/Octicons";
@@ -27,7 +28,7 @@ export default function TabLayout() {
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
             <IconSymbol
-              size={28}
+              size={20}
               name="house.fill"
               color={focused ? COLORS.primary : COLORS.gray7}
             />
@@ -41,7 +42,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons
               name="electric-bolt"
-              size={28}
+              size={20}
               color={focused ? COLORS.primary : COLORS.gray7}
             />
           ),
@@ -52,9 +53,9 @@ export default function TabLayout() {
         options={{
           title: "Invest",
           tabBarIcon: ({ color, focused }) => (
-            <MaterialIcons
-              name="electric-bolt"
-              size={28}
+            <Feather
+              name="trending-up"
+              size={20}
               color={focused ? COLORS.primary : COLORS.gray7}
             />
           ),
@@ -67,7 +68,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <FontAwesome5
               name="file-alt"
-              size={24}
+              size={20}
               color={focused ? COLORS.primary : COLORS.gray7}
             />
           ),
@@ -80,7 +81,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <Octicons
               name="person"
-              size={24}
+              size={20}
               color={focused ? COLORS.primary : COLORS.gray7}
             />
           ),
